@@ -63,12 +63,22 @@ header {
 .side-bar {
     grid-row: 1/ 4;
     height: 100%;
+    background-color: rgb(20, 103, 63);
+    width: 80%;
 }
 
 .side-list {
-    display: block;
+    display: flex;
+    flex-direction: column;
     color: var(--txtColor);
-    background-color: var(--backgrndColor);
+    gap:30px;
     font-size: var(--txtSizeL);
 
+}
+
+.school-icon {
+    width: 50%;
+    height: 50%;
+    align-self: center;
+    margin-right: 40px;
 }
