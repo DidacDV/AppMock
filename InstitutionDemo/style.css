@@ -1,22 +1,25 @@
 :root {
     --fontFamily: 'Courier New', Courier, monospace;
-    --txtColor: white;
+    --txtColor: rgb(255, 255, 255);
+    --f-color: #053F5C;
+    --s-color: #2789aa;
+    --t-color: #fc7a00;
     --txtSizeS: 15px;
     --txtSizeM: 20px;
     --txtSizeL: 25px;
-    --txtSizeXL: 30px;
+    --txtSizeXL: 39px;
     --backgrndColor: rgb(20, 103, 103);
 }
 
 html, body {
-    height: 100%;
+    height: 100vh;
     margin: 0;
-    font-family: tahoma;
+    padding: 0;
+    font-family: 'Lucida Console', Monaco, monospace;
 }
-
 header {
     color: var(--txtColor);
-    background-color: var(--backgrndColor);
+    background-color: var(--f-color);
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -56,18 +59,19 @@ header {
     margin: 0;
     display: grid;
     width: 100%;
-    height: 94.4vh;
+    height: 100vh;
     grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr;
-    background-color: rgb(211,211,211);
+    grid-template-rows: 1fr auto auto;
+    grid-auto-rows: max-content;
+    background-color: rgb(255,255,255);
 }
 
 .side-bar {
     display: flex;
     flex-direction: column;
     grid-row: 1/ 4;
-    height: 100%;
-    background-color: rgb(20, 103, 63);
+    height: 100;
+    background-color: var(--s-color);
     width: 80%;
     color: var(--txtColor);
 
@@ -125,22 +129,25 @@ header {
     flex-direction: column;
 }
     .school-intro > h1 {
+        margin-top: 75px;
         width: fit-content;
         font-family: tahoma;
-        background-color: rgb(20, 103, 103);
-        border-radius:10px;
-        padding: 10px;
+        color: #053F5C;
+        font-size: var(--txtSizeXL);
     }
 
+#first-title {
+    color: #053F5C;
+    font-size: var(--txtSizeM);
+}
+
 #sec-title {
-    align-self: center;
-    font-size: var(--txtSizeL);
-    background-color: rgb(20, 103, 103);
-    border-radius:10px;
-    padding: 10px;
-    border-width: 20px;
-    border-style:outset;
-    border-color: rgb(20, 103, 63);
+    align-self: flex-start;
+    font-size: var(--txtSizeM);
+    margin-top: 140px;
+    margin-bottom: 4%;
+    color: var(--f-color);
+    font-weight: lighter;
 }
 
 
@@ -151,51 +158,57 @@ header {
     justify-content: space-between;
     grid-row: 2 / 4;
     grid-column: 2 / 4;
+    gap: 40px;
 }
 
 .activity-card {
     display: flex;
     flex-direction: column;
     justify-content: flex-start; 
-    background-color:#9ab780;
+    background-color: #ace4ed;
     height: fit-content;
     width: 35%;
     padding: 0px 5% 1% 5px;
-    border-left: 8px solid #4CAF50;
+    border-left: 8px solid var(--f-color);
     border-radius: 4px;
-}
+    color: var(--f-color);
+} 
 .activity-card > h2 {
-    margin-top: 5%;
+    margin-top: 10%;
+    margin-left: 10%;
+    margin-right: 10%;
     align-self:auto;
     text-decoration:underline;
     font-size: var(--txtSizeL);
-    color: var(--txtColor);
 }
 
 .activity-card > p {
+    margin-left: 10%;
     text-align:start;
     margin-top:0;
     align-self:auto;
     font-size: var(--txtSizeS);
-    color: var(--txtColor);
 }
 
 .activity-card-footer {
+    margin-left: 10%;
     display: flex;
     flex-direction: row;
+    margin-bottom: 5%;
 }
 
 .activity-card-expansion {
     width: auto;
-    font-family: tahoma;
+    font-family: Arial;
     border-radius: 5px;
     color: white;
+    font-weight: bold;
     border: 0;
-    background-color: var(--backgrndColor);
+    background-color: #fc7a00;
 }
 
 .activity-card-expansion:hover {
-    background-color: rgb(116, 244, 225);
+    background-color: #ffa02b;
     transform: scale(1.05) perspective(5px)
 }
 
@@ -210,5 +223,5 @@ header {
 }
 
 .star:hover {
-    fill:yellow
+    fill: #FFB701;
 }
