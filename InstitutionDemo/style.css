@@ -1,8 +1,8 @@
 :root {
     --fontFamily: 'Courier New', Courier, monospace;
     --txtColor: white;
-    --txtSizeS: 12px;
-    --txtSizeM: 17px;
+    --txtSizeS: 15px;
+    --txtSizeM: 20px;
     --txtSizeL: 25px;
     --txtSizeXL: 30px;
     --backgrndColor: rgb(20, 103, 103);
@@ -145,6 +145,70 @@ header {
 
 
 .activity-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
     grid-row: 2 / 4;
     grid-column: 2 / 4;
+}
+
+.activity-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; 
+    background-color:#9ab780;
+    height: fit-content;
+    width: 35%;
+    padding: 0px 5% 1% 5px;
+    border-left: 8px solid #4CAF50;
+    border-radius: 4px;
+}
+.activity-card > h2 {
+    margin-top: 5%;
+    align-self:auto;
+    text-decoration:underline;
+    font-size: var(--txtSizeL);
+    color: var(--txtColor);
+}
+
+.activity-card > p {
+    text-align:start;
+    margin-top:0;
+    align-self:auto;
+    font-size: var(--txtSizeS);
+    color: var(--txtColor);
+}
+
+.activity-card-footer {
+    display: flex;
+    flex-direction: row;
+}
+
+.activity-card-expansion {
+    width: auto;
+    font-family: tahoma;
+    border-radius: 5px;
+    color: white;
+    border: 0;
+    background-color: var(--backgrndColor);
+}
+
+.activity-card-expansion:hover {
+    background-color: rgb(116, 244, 225);
+    transform: scale(1.05) perspective(5px)
+}
+
+.star {
+    margin-left: 35%;
+    fill: white; 
+    width: 20%; 
+    height: 20%;
+    cursor: pointer;
+    transition: fill 0.3s; 
+    justify-self: flex-end;
+}
+
+.star:hover {
+    fill:yellow
 }
