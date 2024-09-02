@@ -5,10 +5,11 @@
     --s-color: #2789AA;
     --t-color: #FC7A00;
     --fo-color: #ACE4ED;
-    --txtSizeS: 15px;
-    --txtSizeM: 20px;
-    --txtSizeL: 25px;
-    --txtSizeXL: 39px;
+    --hover-color:rgb(189, 189, 170);
+    --txtSizeS: 1rem;
+    --txtSizeM: 1.2rem;
+    --txtSizeL: 1.5rem;
+    --txtSizeXL: 2rem;
     --backgrndColor: rgb(20, 103, 103);
 }
 
@@ -17,6 +18,8 @@ html, body {
     margin: 0;
     padding: 0;
     font-family: 'Lucida Console', Monaco, monospace;
+    overflow: visible;
+
 }
 header {
     color: var(--txtColor);
@@ -49,11 +52,11 @@ header {
     }
 
     .header-list a:hover {
-        color:beige;
+        color:var(--hover-color);
     }
 
     .side-list a:hover {
-        color:beige;
+        color:var(--hover-color);
     }
 
 .container {
@@ -71,11 +74,11 @@ header {
     display: flex;
     flex-direction: column;
     grid-row: 1/ 4;
-    height: 100;
+    height: 100%;
+    min-height: 200px;
     background-color: var(--s-color);
     width: 80%;
     color: var(--txtColor);
-
 }
 
 .side-list {
@@ -119,7 +122,7 @@ header {
 }
 
 .settings > a:hover {
-    color:beige;
+    color:var(--hover-color);
 }
 
 .school-intro {
@@ -235,7 +238,7 @@ header {
 }
 
 .right-side-bar > h2 {
-    margin-top: 45%;
+    margin-top: 5%;
     margin-bottom: 0;
     font-weight: normal;
     font-size: calc(var(--txtSizeL) - 3px);
@@ -253,6 +256,18 @@ header {
     font-weight: normal;
     background-color: white;
     margin: 0;
+}
+
+.more {
+    font-size: large;
+    color: var(--f-color);
+    text-decoration: none;
+    opacity:initial;
+    margin-top: 5%;
+}
+
+.more:hover {
+    color: var(--hover-color);
 }
 
 .announcement-card {
@@ -281,3 +296,4 @@ header {
 .announcement-card:last-child {
     border-bottom: none;
 }
+
