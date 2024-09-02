@@ -2,8 +2,9 @@
     --fontFamily: 'Courier New', Courier, monospace;
     --txtColor: rgb(255, 255, 255);
     --f-color: #053F5C;
-    --s-color: #2789aa;
-    --t-color: #fc7a00;
+    --s-color: #2789AA;
+    --t-color: #FC7A00;
+    --fo-color: #ACE4ED;
     --txtSizeS: 15px;
     --txtSizeM: 20px;
     --txtSizeL: 25px;
@@ -63,10 +64,10 @@ header {
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-template-rows: 1fr auto auto;
     grid-auto-rows: max-content;
-    background-color: rgb(255,255,255);
+    background-color: white;
 }
 
-.side-bar {
+.left-side-bar {
     display: flex;
     flex-direction: column;
     grid-row: 1/ 4;
@@ -85,13 +86,13 @@ header {
 
 }
 
-.side-bar > p {
+.left-side-bar > p {
     margin-top: auto;
     align-self: center;
 }
 
-.school-icon {
-    width: 50%;
+.logo {
+    width: 40%;
     height: 50%;
     align-self: center;
     margin-right: 40px;
@@ -132,12 +133,12 @@ header {
         margin-top: 75px;
         width: fit-content;
         font-family: tahoma;
-        color: #053F5C;
+        color: var(--f-color);
         font-size: var(--txtSizeXL);
     }
 
 #first-title {
-    color: #053F5C;
+    color: var(--f-color);
     font-size: var(--txtSizeM);
 }
 
@@ -165,7 +166,7 @@ header {
     display: flex;
     flex-direction: column;
     justify-content: flex-start; 
-    background-color: #ace4ed;
+    background-color: var(--fo-color);
     height: fit-content;
     width: 35%;
     padding: 0px 5% 1% 5px;
@@ -204,7 +205,7 @@ header {
     color: white;
     font-weight: bold;
     border: 0;
-    background-color: #fc7a00;
+    background-color: var(--t-color);
 }
 
 .activity-card-expansion:hover {
@@ -224,4 +225,59 @@ header {
 
 .star:hover {
     fill: #FFB701;
+}
+
+.right-side-bar {
+    grid-row: 1/4;
+    display: flex;
+    flex-direction:column;
+    align-items: center;
+}
+
+.right-side-bar > h2 {
+    margin-top: 45%;
+    margin-bottom: 0;
+    font-weight: normal;
+    font-size: calc(var(--txtSizeL) - 3px);
+    color:var(--f-color);
+}
+
+.announcements-tab {
+    margin-top: 0%;
+    background-color: var(--s-color);
+    border-radius: 8px;
+    width: 70%;
+}
+
+.announcements-tab > h2 {
+    font-weight: normal;
+    background-color: white;
+    margin: 0;
+}
+
+.announcement-card {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+    padding-bottom: 10px;
+    padding-left: 25px;
+    padding-right: 25px;
+    border-bottom: 2px solid var(--t-color);
+    color:white;
+    font-weight: normal;
+    overflow-wrap: break-word;
+}
+
+.announcement-card > h3 {
+    font-weight: normal;
+    margin-bottom: 0;
+}
+
+.announcement-card > p {
+    margin-top: 5%;
+    text-wrap:balance;
+}
+
+.announcement-card:last-child {
+    border-bottom: none;
 }
