@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!DOCTYPE html> 
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -28,7 +28,7 @@
             </ul>
             <p>{This is only shown if admin-user}</p>
             <ul class = "tech-list">
-                <li class = "settings"><a href = #>Add activity</a></li>
+                <li class = "settings new-activity"><a href = #>Add activity</a></li>
                 <li class = "settings"><a href = # >Settings</a></li>
             </ul>
         </div>
@@ -105,5 +105,18 @@
             <a href = # class = "more">More announcements</a>
         </div>
     </div>
+    <dialog id="activity-dialog">
+        <form method="dialog" id = "activity-form">
+            <label for="title">Insert title:</label>
+            <input type="text" id="title" name="title" required>
+            <label for="description">Insert description (max 150 characters):</label>
+            <textarea id="description" name="description" maxlength="150" required></textarea>
+            <menu>
+                <button class = "cancel-btn" value="cancel">Cancel</button>
+                <button class = "submit-btn" type="submit">Submit</button>
+            </menu>
+        </form>
+    </dialog>
+    <script src="script.js"></script>
 </body>
 </html>
