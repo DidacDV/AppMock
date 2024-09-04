@@ -110,6 +110,11 @@ header {
     margin-right: 40px;
 }
 
+.form-logo {
+    width: 20%;
+    height: 30%;
+}
+
 .tech-list {
     list-style-type: none;
     color: var(--txtColor);
@@ -313,3 +318,39 @@ header {
     border-bottom: none;
 }
 
+
+#activity-form {
+    display: flex;
+    flex-direction:column;
+    align-items: center;
+    padding-top: 1%;
+    padding-bottom: 1%;
+}
+
+#activity-form input {
+    width: 30%;
+    margin-bottom: 5%;
+}
+
+#activity-form label {
+    margin-bottom: 2%;
+}
+
+#activity-form menu {
+    padding-left: 0;
+    margin-bottom: 1%;
+}
+
+.form-header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+
+
+dialog {
+    border-color: orange;
+    width: 22%;
+
+}

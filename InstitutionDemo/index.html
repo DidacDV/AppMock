@@ -107,16 +107,22 @@
     </div>
     <dialog id="activity-dialog">
         <form method="dialog" id = "activity-form">
+            <div class = "form-header">
+            <svg width="40" height="50" viewBox="-2 0 42 52">
+                <path d="M40,0 l-40,25 l40,25" fill="none" stroke="black" stroke-width="3" />
+            </svg>
+                <img src="imgs/logo.png" class = "form-logo">
+            </div>
             <label for="title">Insert title:</label>
             <input type="text" id="title" name="title" required>
-            <label for="description">Insert description (max 150 characters):</label>
-            <textarea id="description" name="description" maxlength="150" required></textarea>
+            <label for="description">Insert description:</label>
+            <textarea id="description" name="description" maxlength="150" required placeholder="150 characters maximum."></textarea>
             <menu>
                 <button class = "cancel-btn" value="cancel">Cancel</button>
-                <button class = "submit-btn" type="submit">Submit</button>
+                <button class = "submit-btn" type="submit">Create</button>
             </menu>
         </form>
-    </dialog>
+    </dialog> 
     <script src="script.js"></script>
 </body>
 </html>
