@@ -319,38 +319,93 @@ header {
 }
 
 
+dialog {
+    border: 2px solid var(--s-color);
+    padding: 20px; 
+    width: 35%;
+    border-radius: 8px; 
+    background-color: var(--fo-color); 
+
+}
+
 #activity-form {
     display: flex;
-    flex-direction:column;
+    flex-direction: column;
     align-items: center;
     padding-top: 1%;
     padding-bottom: 1%;
+    color: var(--f-color); 
 }
 
-#activity-form input {
-    width: 30%;
-    margin-bottom: 5%;
-}
-
-#activity-form label {
-    margin-bottom: 2%;
-}
-
-#activity-form menu {
-    padding-left: 0;
-    margin-bottom: 1%;
-}
 
 .form-header {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    align-items: center;
+    margin-bottom: 7%;
 }
 
+#activity-form input,
+#activity-form textarea {
+    width: 82%; 
+    padding: 10px; 
+    margin-bottom: 5%; 
+    border-radius: 8px; 
+    border: 2px solid var(--f-color); 
+    background-color: var(--fo-color); 
+    font-size: var(--txtSizeM); 
+    color: var(--f-color); 
+    box-sizing: border-box; 
+}
 
+#activity-form textarea {
+    resize:none;
+    min-height: 120px;
+}
 
-dialog {
-    border-color: orange;
-    width: 22%;
+#activity-form input:focus,
+#activity-form textarea:focus {
+    outline: none; 
+    border-color: var(--t-color); 
+}
 
+#activity-form label {
+    margin-bottom: 2%;
+    font-size: var(--txtSizeM);
+}
+
+#activity-form menu {
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+    padding-left: 0;
+    margin-bottom: 1%;
+}
+
+#activity-form button {
+    width: 45%; 
+    padding: 10px;
+    font-size: var(--txtSizeM);
+    border-radius: 8px;
+    cursor: pointer;
+    color:var(--txtColor);
+}
+
+.submit-btn {
+    background-color: var(--t-color);
+}
+
+.submit-btn:hover{
+    background-color: var(--hover-color);
+    transform: scale(1.05);
+}
+
+.cancel-btn {
+    background-color: #053F5C;
+}
+
+.cancel-btn:hover{
+    background-color: var(--hover-color);
+    transform: scale(1.05);
 }
