@@ -346,6 +346,11 @@ dialog {
     margin-bottom: 7%;
 }
 
+.draw-back-arrow:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+}
+
 #activity-form input,
 #activity-form textarea {
     width: 82%; 

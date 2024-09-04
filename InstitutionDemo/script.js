@@ -7,6 +7,8 @@ const new_activity_button = document.querySelector(".new-activity");
 const new_activity_dialog = document.querySelector("#activity-dialog")
 const cancel_btn = document.querySelector(".cancel-btn")
 const activity_form = document.querySelector("#activity-form");
+const draw_back_arrow = document.querySelector(".draw-back-arrow");
+
 
 const activity_card_footer_html = `
     <div class="activity-card-footer">
@@ -29,6 +31,11 @@ function createActivity() {
 
 //closing button
 cancel_btn.addEventListener("click", (e) => {
+    e.preventDefault();
+    new_activity_dialog.close();
+})
+
+draw_back_arrow.addEventListener("click",(e) => {
     e.preventDefault();
     new_activity_dialog.close();
 })
